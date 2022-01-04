@@ -536,3 +536,52 @@ function frequency() {
     console.log("After Removing:", char, ",New String Is:", newstring);
   }
   lastAccur("a");
+
+
+
+  // program 23
+// Write a js program to remove all occurrences of a character from string.
+
+function allAccur(char) {
+    var string, h;
+    var newstring = [];
+    newstring[0] = "i love pakistan.pakistan is my country";
+    var g = 0;
+    for (let x = 0; x < newstring[0].length; x++) {
+      if (newstring[g].charAt(x) == char) {
+        {
+          h = g;
+          g++;
+          newstring[g] = newstring[h].replace(char, "");
+        }
+      }
+    }
+  
+    string = newstring[newstring.length - 1];
+    console.log("After Removing All:", char, ",New String Is:", string);
+  }
+  allAccur("a");
+  
+
+
+   // program 24
+  // Write a js program to remove all repeated word from a given string.
+  
+  function allword() {
+    var string='i love pakistan.pakistan is,my country.i like it is'
+    var newarray=[]
+    var array=string.split(".")
+    var news=array.join(" ")
+    newarray=news.split(",")
+    var news1=newarray.join(" ")
+    var newarray1=news1.split(" ")
+    for(let x=0;x<newarray1.length;x++){
+      for(let y=x+1;y<newarray1.length;y++)
+            if (newarray1[x]==newarray1[y]) {
+              newarray1.splice(y,1)
+            }
+    }
+    var result=newarray1.join(" ")
+    console.log("yesssssssss",result);
+      }
+  allword()
